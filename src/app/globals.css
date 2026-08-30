@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffdfd;
+  --foreground: #1c2d33;
+  --muted: #5d6f76;
+  --brand: #1a9cc9;
+  --brand-deep: #0d75a3;
+  --brand-soft: #eaf9ff;
+  --brand-strong: #0a8ec0;
+  --teal: #72d1d9;
+  --mint: #dffaf7;
+  --pink: #f35aaa;
+  --pink-soft: #ffe5f4;
+  --lavender: #8f84d9;
+  --gold: #d9c38a;
+  --warm: #f7f0ed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(29, 102, 93, 0.16);
+}
+
+@layer utilities {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .soft-pattern {
+    background-image:
+      linear-gradient(rgba(29, 102, 93, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29, 102, 93, 0.03) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
