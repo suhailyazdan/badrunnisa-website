@@ -1,2 +1,2 @@
 # badrunnisa-website
-This is a website of an NGO named BADERUNISSA FOUNDATION. The BADERUNISSA FOUNDATION is an active, grassroots non-governmental organization (NGO) headquartered along Bannerghatta Road in Bengaluru, Karnataka.  
+This is a website of an NGO named BADERUNISSA FOUNDATION. The BADERUNISSA FOUNDATION is an active, grassroots non-governmental organization (NGO) headquartered along Bannerghatta Road in Bengaluru, Karnataka.  Operating under the core motto of "Serving Humanity with Compassion," the foundation drives social impact through localized humanitarian service, dialysis support, healthcare support, public advocacy, and safety initiatives.
