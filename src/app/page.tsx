@@ -28,7 +28,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="rounded-[2rem] border border-[#e8e1d5] bg-[linear-gradient(135deg,#fffefc_0%,#f3efe8_100%)] p-8 shadow-[0_18px_40px_rgba(16,24,40,0.05)]">
+          <div className="rounded-[2rem] border border-[#dfe9e6] bg-[linear-gradient(135deg,#edf9f7_0%,#fffdf8_42%,#f5efe8_100%)] p-8 shadow-[0_18px_40px_rgba(16,24,40,0.05)]">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0d75a3]">Our mission</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900">
               Compassion rooted in action.
@@ -44,8 +44,15 @@ export default function Home() {
               ["Healthcare access", "Helping families navigate critical care needs and treatment support."],
               ["Community advocacy", "Promoting public safety and civic awareness with local action."],
               ["Trust and dignity", "Every person is treated with care, fairness and human respect."],
-            ].map(([title, copy]) => (
-              <div key={title} className="rounded-[1.5rem] border border-[#e7dfd6] bg-white p-5 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
+            ].map(([title, copy], index) => (
+              <div
+                key={title}
+                className={`rounded-[1.5rem] border p-5 shadow-[0_12px_24px_rgba(15,23,42,0.04)] ${
+                  index % 2 === 0
+                    ? "border-[#dfeaf1] bg-[#f5fbfd]"
+                    : "border-[#e9e1d8] bg-[#fffdfb]"
+                }`}
+              >
                 <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{copy}</p>
               </div>

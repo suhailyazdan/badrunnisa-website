@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     "healthcare support",
     "community welfare",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "Baderunissa Foundation",
     description:

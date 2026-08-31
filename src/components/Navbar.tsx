@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navGroups = [
   {
@@ -31,20 +31,27 @@ const navGroups = [
     label: "Updates",
     href: "/updates",
   },
-  {
-    label: "More",
-    children: [
-      { label: "Humanity & Compassion", href: "/humanity-compassion" },
-      { label: "Dialysis Support", href: "/dialysis-support" },
-      { label: "Updates", href: "/updates" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const desktopNavRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        desktopNavRef.current &&
+        event.target instanceof Node &&
+        !desktopNavRef.current.contains(event.target)
+      ) {
+        setOpenDropdown(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#e7e0d6] bg-[#fffdf9]/85 backdrop-blur-xl">
@@ -70,7 +77,7 @@ export function Navbar() {
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-2 xl:flex" aria-label="Main navigation">
+          <nav ref={desktopNavRef} className="hidden items-center gap-2 xl:flex" aria-label="Main navigation">
             {navGroups.map((item) => {
               const hasChildren = Boolean(item.children?.length);
 
