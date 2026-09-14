@@ -432,6 +432,14 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <EmergencyNumbers />
       </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <DonationCTA />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <VolunteerCTA />
+      </section>
     </>
   );
 }
