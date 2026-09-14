@@ -24,7 +24,7 @@ export function Hero({
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            'linear-gradient(90deg, rgba(2, 81, 145, 0.8), rgba(175, 239, 255, 0.3)), url("/banner-Baderunnisa-Foundation.png")',
+            'linear-gradient(90deg, rgba(2, 81, 145, 0.8), rgba(175, 239, 255, 0.3)), url("/banner-Baderunnisa-Foundation.jpg")',
         }}
         aria-hidden="true"
       />
