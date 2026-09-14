@@ -21,9 +21,9 @@ export default function Home() {
       <Hero
         eyebrow="Baderunissa Foundation"
         title="Serving Humanity with Compassion"
-        description="We are an active grassroots humanitarian organization in Bengaluru, working to protect dignity, strengthen communities and support vulnerable people through compassionate care."
+        description="The BADERUNISSA FOUNDATION is an active, grassroots non-governmental organization headquartered along Bannerghatta Road in Bengaluru, Karnataka. We drive social impact through localized humanitarian service, dialysis support, healthcare support, public advocacy, and safety initiatives."
         primaryCta={{ href: "/get-involved", label: "Support Our Mission" }}
-        secondaryCta={{ href: "/about", label: "Become a Volunteer" }}
+        secondaryCta={{ href: "/contact", label: "Get in Touch" }}
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -133,23 +133,103 @@ export default function Home() {
             <SectionHeading
               eyebrow="Mission & vision"
               title="Locally rooted, compassion-first, community-led"
-              description="The Foundation believes that meaningful service begins with understanding people’s needs and responding with dignity, care and practical action."
+              description="The Foundation believes that meaningful service begins with understanding people's needs and responding with dignity, care and practical action."
             />
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             <div className="rounded-[1.75rem] border border-[#e7e2d8] bg-white p-6 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0d75a3]">Mission</p>
               <p className="mt-4 text-base leading-7 text-slate-600">
-                To serve communities with compassion, dignity and practical support—especially during periods of health crisis, social hardship and public vulnerability.
+                To protect and promote basic human rights, ensuring that every individual is treated with dignity and fairness.
               </p>
             </div>
             <div className="rounded-[1.75rem] border border-[#e7e2d8] bg-white p-6 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0d75a3]">Vision</p>
               <p className="mt-4 text-base leading-7 text-slate-600">
-                A more humane and caring society where every person has access to dignity, safety, support and opportunity.
+                To ensure that every needy person receives timely help, dignity, and hope through collective humanitarian efforts.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f5f0ea] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="About us"
+            title="Founded with a mission to serve with compassion"
+            description="We are BADERUNISSA FOUNDATION, a non-governmental organization founded on 15-12-2023 in the loving memory of our beloved prophet Muhammad (peace be upon him) and the founder's mother: Mrs. Baderunissa."
+          />
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-[#dfe9e6] bg-white p-8 shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
+              <h3 className="text-xl font-semibold text-slate-900">Our Focus</h3>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                We specialize in supporting critical needy dialysis patients by sponsoring free dialysis sessions. We understand that kidney disease/failure is one of the most challenging and critical conditions in medical science, requiring regular treatment and dialysis procedures on life support.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-[#dfe9e6] bg-white p-8 shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
+              <h3 className="text-xl font-semibold text-slate-900">Core Working Areas</h3>
+              <ul className="mt-4 space-y-2 text-base text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#0d75a3]">•</span>
+                  <span>Humanitarian Services</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#0d75a3]">•</span>
+                  <span>Human Rights</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#0d75a3]">•</span>
+                  <span>Healthcare & Dialysis Support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#0d75a3]">•</span>
+                  <span>Education, Charity & Social Welfare</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Programs & Projects"
+          title="Practical action for community welfare"
+          description="Our programs span healthcare support, civic advocacy, and direct community assistance. Here's what we're currently working on:"
+        />
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {[
+            {
+              title: "Infrastructure & Road Safety",
+              description: "Addressing accident-prone zones like the Jayadeva U-Turn junction in Bengaluru. We work with local authorities (Mico Layout Police, GBA, KSHRC) to install traffic signals and prevent accidents.",
+            },
+            {
+              title: "Critical Healthcare Support",
+              description: "Handling critical and important healthcare cases where intervention is needed. We provide financial bridges and coordination for urgent medical treatment.",
+            },
+            {
+              title: "Women & Child Safety",
+              description: "Lodging complaints and approaching local police authorities to highlight cases affecting women and child safety. We amplify government helplines and emergency systems.",
+            },
+            {
+              title: "Dialysis Sponsorship",
+              description: "Supporting critical dialysis cases by sponsoring free sessions at various hospitals. One dialysis session costs approximately ₹1,700 (subject to hospital charges).",
+            },
+            {
+              title: "Social Media Advocacy",
+              description: "Effective use of digital platforms to raise awareness about public safety, healthcare access, and human rights. Follow us for updates and important announcements.",
+            },
+            {
+              title: "Crisis Assistance",
+              description: "Providing clothes, basic food provisions, and educational support items to low-income families facing sudden financial distress.",
+            },
+          ].map((program) => (
+            <div key={program.title} className="rounded-[1.75rem] border border-[#e8e1d7] bg-white p-6 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
+              <h3 className="text-lg font-semibold text-slate-900">{program.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{program.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -158,7 +238,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Leadership"
             title="Guided by compassion and community accountability"
-            description="The foundation’s leadership reflects a practical, service-oriented approach to humanitarian work and social care."
+            description="The foundation's leadership reflects a practical, service-oriented approach to humanitarian work and social care."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {leadership.map((person) => (
@@ -183,39 +263,131 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Get involved"
-          title="Stand with us in service and solidarity"
-          description="There are many ways to contribute to the mission through volunteerism, skills-sharing, sponsorship and community advocacy."
+          title="Be the Change"
+          description="At BADERUNISSA FOUNDATION, we believe that true social transformation starts from the ground up. Whether you have a few hours a week, a specific professional skill, or a passion for making a difference, there is a place for you here."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {[
-            ["Become a Volunteer", "Contribute time and care to community initiatives and support work on the ground."],
-            ["Share Your Skills", "Offer your expertise to strengthen outreach, awareness and support efforts."],
-            ["Partner or Sponsor a Cause", "Support urgent needs, healthcare assistance and targeted community care."],
-            ["Community Ambassador", "Help amplify the foundation’s mission and mobilise local compassion."],
-          ].map(([title, copy]) => (
-            <div key={title} className="rounded-[1.75rem] border border-[#e8e1d7] bg-white p-6 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
+            {
+              title: "Become a Volunteer",
+              description: "Step onto the front lines of social change. From organizing local healthcare camps to participating in community-led civic drives, your physical presence can change a life today.",
+            },
+            {
+              title: "Share Your Skills",
+              description: "We are always looking for professionals to lend their expertise. If you specialize in graphic design, content writing, social media, or legal advocacy, your skills can scale our operations.",
+            },
+            {
+              title: "Partner or Sponsor a Cause",
+              description: "Collaborate with us through financial sponsorships, Corporate Social Responsibility (CSR) partnerships, or matching donation drives to subsidize critical treatments.",
+            },
+            {
+              title: "Community Ambassador",
+              description: "Amplify our voice by raising awareness online, hosting small fundraisers in your neighborhood, or sharing our stories with your network.",
+            },
+          ].map((item) => (
+            <div key={item.title} className="rounded-[1.75rem] border border-[#e8e1d7] bg-white p-6 shadow-[0_12px_24px_rgba(15,23,42,0.04)]">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#edfaff] text-lg text-[#0d75a3] ring-1 ring-[#dfeaf1]">
                 ✦
               </div>
-              <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{copy}</p>
+              <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
             </div>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <p className="text-base leading-7 text-slate-600 mb-6">
+            Ready to take the first step? Your journey with us starts with a simple conversation. Contact us and tell us a little bit about your interests and availability.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1a9cc9] to-[#72d1d9] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+          >
+            Get in Touch
+          </Link>
+        </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <section className="bg-[#f5f0ea] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Donation Appeal"
+            title="Your support can save lives"
+            description="Would you consider making a donation or sponsoring free dialysis sessions every month? Your contribution gets us one step closer to our goal of supporting critical dialysis patients."
+          />
+          <div className="mt-10 rounded-[2rem] border border-[#dfe9e6] bg-white p-8 shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div>
+                <h3 className="text-2xl font-semibold text-slate-900">One Dialysis Session</h3>
+                <div className="mt-4 flex items-baseline gap-2">
+                  <span className="text-4xl font-bold text-[#0d75a3]">₹1,700</span>
+                  <span className="text-base text-slate-600">/session</span>
+                </div>
+                <p className="mt-4 text-sm text-slate-600">
+                  Subject to change with hospital charges. When you become a monthly contributor, you directly support a critical dialysis patient receiving life-saving treatment.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#0d75a3] font-bold">✓</span>
+                    <span>Direct impact on patient care</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#0d75a3] font-bold">✓</span>
+                    <span>Support for multiple patients monthly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#0d75a3] font-bold">✓</span>
+                    <span>Regular updates on impact</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col justify-center gap-4">
+                <Link
+                  href="/dialysis-support"
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1a9cc9] to-[#72d1d9] px-6 py-3 text-base font-semibold text-white transition hover:opacity-95"
+                >
+                  Make a Donation
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-[#0d75a3] bg-transparent px-6 py-3 text-base font-semibold text-[#0d75a3] transition hover:bg-[#0d75a3] hover:text-white"
+                >
+                  Sponsor Monthly
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mb-10">
           <SectionHeading
-            eyebrow="Updates"
+            eyebrow="News & Blog"
             title="Latest community updates"
-            description="The foundation continues to respond to welfare, health and civic needs through compassionate and practical action."
+            description="The foundation continues to respond to welfare, health and civic needs through compassionate and practical action. Follow us on YouTube and Instagram for more updates."
           />
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {updates.map((item) => (
             <NewsCard key={item.title} title={item.title} summary={item.summary} date={item.date} />
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <p className="text-slate-600 mb-4">Follow us on social media for more updates and announcements</p>
+          <div className="flex justify-center gap-4">
+            <Link
+              href="https://youtube.com"
+              className="inline-flex items-center gap-2 rounded-full border border-[#0d75a3] px-4 py-2 text-sm font-semibold text-[#0d75a3] transition hover:bg-[#0d75a3] hover:text-white"
+            >
+              YouTube
+            </Link>
+            <Link
+              href="https://instagram.com"
+              className="inline-flex items-center gap-2 rounded-full border border-[#0d75a3] px-4 py-2 text-sm font-semibold text-[#0d75a3] transition hover:bg-[#0d75a3] hover:text-white"
+            >
+              Instagram
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -259,14 +431,6 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <EmergencyNumbers />
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <DonationCTA />
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <VolunteerCTA />
       </section>
     </>
   );
