@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navItems, siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -61,7 +62,19 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-[#e7e0d6] pt-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Baderunissa Foundation.</p>
+          <div className="flex items-center gap-4">
+            <p>© {new Date().getFullYear()} Baderunissa Foundation.</p>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/NGO-logo.jpeg"
+                alt="NGO Logo"
+                width={24}
+                height={24}
+                className="h-6 w-6"
+              />
+              <span className="text-xs uppercase tracking-[0.1em]">Registered NGO</span>
+            </div>
+          </div>
           <p>Serving Humanity with Compassion</p>
         </div>
       </div>

@@ -29,6 +29,17 @@ export function Hero({
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(217,195,138,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(35,135,150,0.24),_transparent_30%)]" aria-hidden="true" />
+      
+      {/* NGO Logo Watermark */}
+      <div className="absolute right-6 top-6 z-10 opacity-20 lg:right-12 lg:top-12">
+        <Image
+          src="/NGO-logo.jpeg"
+          alt="NGO Logo Watermark"
+          width={80}
+          height={80}
+          className="h-16 w-16 lg:h-20 lg:w-20"
+        />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:items-center">
